@@ -71,3 +71,26 @@ developing your own process.
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+
+  1. Add a new toy when the form is submitted:
+
+  - submit empty form and check console and network responses
+  - 501 error internal server
+    "Check the render method of `ToyContainer`"
+  - Route good
+  - Model good
+  - server errors led to controller typo should be "Toy" not "Toys"
+  ERROR FIXED
+
+  2. Update number of likes for a toy
+
+  - like test led to ToyCard.js:21 Error unexpected end JSON
+  - added :id to routes and params
+  - removed :id
+  - no issue in toyCard
+  - in toy controller no "render json: toy" for update section
+  ERROR FIXED
+
+  3. Donate a toy to Goodwill (and delete it from our database)
+  -add :destroy to toy routes
+  ERROR FIXED
